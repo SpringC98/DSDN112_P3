@@ -1,5 +1,13 @@
 #cog{
-  height: 50em;
+  position: inline;
+  height: 20em;
+  transition: 0.25s;
+  overflow: hidden;
+}
+
+#cog.left{
+}
+#cog.right{
 }
 
 h1{
