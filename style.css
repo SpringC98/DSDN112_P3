@@ -1,6 +1,5 @@
 #cog{
-  position: inline;
-  height: 20em;
+  height: 400px;
   transition: 0.25s;
   overflow: hidden;
 }
@@ -13,4 +12,15 @@
 h1{
   text-align: center;
   font-family: Roboto, sans-serif;
+}
+
+a{
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  transform: translate(0, 35%); /* VERY janky, will change later */
 }

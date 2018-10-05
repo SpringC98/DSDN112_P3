@@ -1,16 +1,22 @@
-// Keep a permanent record of how many degrees we have rotated
-var rotation = 0;
+// WARNING NONE OF THIS WORKS BECAUSE I'M A N00B
 
-// Why this? Well you're not guaranteed the "cog" element exists until the page is finished loading the DOM
-document.addEventListener("DOMContentLoaded", function() {
-	// Get the cog once, not every time we rotate
-	var element = document.getElementById("cog");
+var Disks = new Map();
+
+document.addEventListener("DOMContentLoaded", function(){
+	var el = document.getElementsByClassName("left");
+	var element = document.getElementsByClassName("right");
+
+	var rotation = 0;
+
+	Disks.set(el, rotation);
+	Disks.set(element, rotation);
 
 	// On wheel, run our function. Pass the element + the event
-	element.addEventListener("wheel", function(evt) { rotateSelection(element, evt); }, false);
+	el.addEventListener("wheel", function(evt){ rotateSelection(el, evt); }, false);
+	element.addEventListener("wheel", function(evt){ rotateSelection(element, evt); }, false);
 });
 
-function rotateSelection(element, evt) {
+function rotateSelection(element, evt){
 	// DeltaY provides how much the user has scrolled (1 wheel = 100 units)
 	// Divide by 10 because 100 is too much
 	rotation = (rotation + evt.deltaY / 10);
