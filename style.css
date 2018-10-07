@@ -1,7 +1,47 @@
+#overlay{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+    cursor: pointer;
+}
+
+#overlay-text{
+  position: absolute;
+  color: white;
+  transform: translate(-50%,-50%);
+}
+
+#overlay-text.title{
+  top: 10%;
+  left: 50%;
+  font-size: 50px;
+}
+
+#overlay-text.text{
+  top: 30%;
+  left: 50%;
+  font-size: 25px;
+}
+
+#overlay-button{ /* Can't get this to center!!!*/
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
 #cog{
   height: 400px;
   transition: 0.25s;
   overflow: hidden;
+  z-index: -1;
 }
 
 #cog.left{
@@ -9,18 +49,18 @@
 #cog.right{
 }
 
+#wheels{
+  display: flex;
+  justify-content: center;
+  transform: translate(0, 35%); /* VERY janky, realistically should change later */
+}
+
 h1{
   text-align: center;
   font-family: Roboto, sans-serif;
 }
 
-a{
+p{
   text-align: center;
   font-family: Roboto, sans-serif;
-}
-
-div{
-  display: flex;
-  justify-content: center;
-  transform: translate(0, 35%); /* VERY janky, will change later */
 }

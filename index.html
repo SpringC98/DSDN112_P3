@@ -21,13 +21,27 @@
 
 	</head>
 	<body>
-		<h1>Learn the Twitch Emotes!</h1>
-		<a>Spin the wheels with your mouse wheel to match the correct image with the appropriate description to learn about the relevant use case and origins of these emotes.</a>
 
-		<div>
+		<!-- Really want to add a transition for this overlay -->
+		<div id="overlay" onclick="off()">
+			<h1 id="overlay-text" class="title">Learn the Twitch Emotes!</h1>
+			<p id="overlay-text" class="text">Spin the wheels with your mouse wheel to match the correct image with the appropriate description to learn about the relevant use case and origins of these emotes.</p>
+		</div>
+
+		<h1>Learn the Twitch Emotes!</h1>
+		<button id="overlay-button" onclick="on()">Description & Instructions</button>
+
+		<div id="wheels">
 			<img id="cog" class="left" src="./assets/wheel.svg" alt="Wheel without options">
 				<span>
-					<!--space for content on this wheel-->
+					<img id="emote" class="Kappa"			src="./assets/emotes/KappaReplacement.png" alt="Emote: Kappa" height="100px">
+					<!-- <img id="emote" class="LUL" 			src="./assets/emotes/LULReplacement.png" alt="Emote: LUL">
+					<img id="emote" class="Kreygasm" 	src="./assets/emotes/KreygasmReplacement.png" alt="Emote: Kreygasm">
+					<img id="emote" class="PogChamp" 	src="./assets/emotes/PogChampReplacement.png" alt="Emote: PogChamp">
+					<img id="emote" class="POGGERS" 	src="./assets/emotes/POGGERSReplacement.png" alt="Emote: POGGERS">
+					<img id="emote" class="HeyGuys" 	src="./assets/emotes/HeyGuysReplacement.png" alt="Emote: HeyGuys">
+					<img id="emote" class="DendiFace" src="./assets/emotes/DendiFaceReplacement.png" alt="Emote: DendiFace">
+					<img id="emote" class="VoteYea" 	src="./assets/emotes/VoteYeaReplacement.png" alt="Emote: VoteYea"> -->
 				</span>
 
 			<img id="cog" class="right" src="./assets/wheel.svg" alt="Wheel without options">
