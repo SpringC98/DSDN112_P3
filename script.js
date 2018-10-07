@@ -1,7 +1,3 @@
-// WARNING NONE OF THIS WORKS BECAUSE I'M A N00B
-
-var Disks = {};
-
 function setCog(cogId){
 	var rotation = 0;
 
