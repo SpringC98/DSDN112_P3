@@ -6,6 +6,7 @@ function setCog(cogId){
 	var rotation = 0;
 
 	var cog = document.getElementById(cogId);
+	rotateMemes(cog)
 
 	// On wheel, run our function. Pass the cog + the event
 	cog.addEventListener("wheel", function(evt){
@@ -16,8 +17,13 @@ function setCog(cogId){
 	}, false);
 }
 
-function rotatePosition(){
-
+// Rotates elements inside cog evenly depending on how many there is
+function rotateMemes(cog) {
+	var num_memes = cog.children.length;
+	for (var i = 0; i < num_memes; i++) {
+		var meme = cog.children[i];
+		meme.style.transform = "rotate(" + (i * 360 / num_memes) + "deg)";
+	}
 }
 
 function on() {
