@@ -1,9 +1,18 @@
-var rotation = 0;
+// WARNING NONE OF THIS WORKS BECAUSE I'M A N00B
+
+var Disks = new Map();
 
 document.addEventListener("DOMContentLoaded", function(){
-	var element = document.getElementById("cog");
+	var el = document.getElementsByClassName("left");
+	var element = document.getElementsByClassName("right");
+
+	var rotation = 0;
+
+	Disks.set(el, rotation);
+	Disks.set(element, rotation);
 
 	// On wheel, run our function. Pass the element + the event
+	el.addEventListener("wheel", function(evt){ rotateSelection(el, evt); }, false);
 	element.addEventListener("wheel", function(evt){ rotateSelection(element, evt); }, false);
 });
 
