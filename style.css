@@ -37,7 +37,7 @@
   font-family: Roboto, sans-serif;
 }
 
-#cog{
+.cog{
   height: 400px;
   transition: 0.25s;
   overflow: hidden;
