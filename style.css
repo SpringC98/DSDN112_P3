@@ -13,9 +13,14 @@
 }
 
 #overlay-text{
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  flex: 0, 1, auto;
+  top: 10%;
   color: white;
-  transform: translate(-50%,-50%);
 }
 
 #overlay-text.title{
@@ -27,24 +32,41 @@
 #overlay-text.text{
   top: 30%;
   left: 50%;
-  font-size: 25px;
+  font-size: 1.4em;
 }
 
-#overlay-button{ /* Can't get this to center!!!*/
+#overlay-text.dimiss{
+  #align-self: flex-end; //doesn't seem to do anything?
+}
+
+#overlay-button{
   display: flex;
+  margin: auto;
   justify-content: center;
+  align-content: center;
   text-align: center;
   font-family: Roboto, sans-serif;
 }
 
+#emote_check{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+}
+
 .cog{
-  height: 400px;
+  max-height: 450px;
+  max-width: 450px;
+  height: 30vw;
+  width: 30vw;
   transition: 0.25s;
   overflow: hidden;
   z-index: -1;
-  background-color: green;
-  width: 400px;
-  border-radius: 200px;
+  background-color: #6441A4; /*Twitch Purple*/
+  border-radius: 100%;
   position: relative;
   vertical-align: center;
 }
@@ -87,7 +109,8 @@ so that the images rotate evenly around the circle
 #wheels{
   display: flex;
   justify-content: center;
-  transform: translate(0, 35%); /* VERY janky, realistically should change later */
+  flex-shrink: 1;
+  transform: translate(0, 0);
 }
 
 h1{

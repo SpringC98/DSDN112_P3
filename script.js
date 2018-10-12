@@ -1,3 +1,5 @@
+var emoteCheck = [];
+
 function setCog(cogId){
 	var rotation = 0;
 	var numberOfEmotes = 0;
@@ -28,7 +30,7 @@ function rotateMemes(cog){
 
 function rotationCheck(cog, rotation, counter){
 	var cogAngle = Math.round(((rotation)%360)/cog.children.length);
-	cogAngle = cogAngle%10;
+	cogAngle = cogAngle/10;
 
 	if(cogAngle==0){
 		counter++;
